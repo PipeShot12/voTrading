@@ -9,7 +9,7 @@ export const HeaderWithRouter = withRouter(Navigation)
 const folder = process.env.PUBLIC_URL;
 function Navigation(props) {
     const { location } = props;
-    console.log(location)
+
     return (
         <Navbar expand="lg" variant="dark" sticky="top">
             <div className="container-fluid col-lg-10 col-12">

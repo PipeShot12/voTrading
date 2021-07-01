@@ -25,26 +25,18 @@ export default function Contact() {
     //handle fields of form
 
     function handleChange(e) {
+
         if (e.target.id === "name") {
-            if (e.target.value) {
-                setInputs((prevState) => ({ ...prevState, name: e.target.value }))
-            }
+            setInputs((prevState) => ({ ...prevState, name: e.target.value }))
         }
         if (e.target.id === "email") {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (e.target.value && re.test(e.target.value)) {
-                setInputs((prevState) => ({ ...prevState, email: e.target.value }))
-            }
+            setInputs((prevState) => ({ ...prevState, email: e.target.value }))
         }
         if (e.target.id === "tel") {
-            if (e.target.value && e.target.value.length > 6) {
-                setInputs((prevState) => ({ ...prevState, tel: e.target.value }))
-            }
+            setInputs((prevState) => ({ ...prevState, tel: e.target.value }))
         }
         if (e.target.id === "msj") {
-            if (e.target.value) {
-                setInputs((prevState) => ({ ...prevState, msj: e.target.value }))
-            }
+            setInputs((prevState) => ({ ...prevState, msj: e.target.value }))
         }
     }
 
@@ -53,9 +45,11 @@ export default function Contact() {
 
     async function handleClick(e) {
         e.preventDefault();
-        if (inputs.name && inputs.email && inputs.tel) {
-            const { name, email, tel, msj } = inputs;
-            const data = { name, email, tel, msj };
+
+        const { name, email, tel, msj } = inputs;
+        const data = { name, email, tel, msj };
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (name.length > 3 && re.test(email) && tel.length >= 7) {
             try {
                 const req = await fetch(process.env.REACT_APP_URL, {
                     method: "POST",
@@ -81,11 +75,18 @@ export default function Contact() {
                 setMsj({ msj: message, status: 503 })
                 setShowMsj(true)
                 setInputs({ name: "", email: "", tel: "", msj: "" });
-
-
             }
 
+
+        } else {
+            console.log("error")
+            const message = "Hay Datos Incorrectos"
+            setMsj({ msj: message, status: 0 })
+            setShowMsj(true)
+            setInputs({ name: "", email: "", tel: "", msj: "" });
         }
+
+
 
     }
 
@@ -124,7 +125,7 @@ export default function Contact() {
                             <label htmlFor="mensaje">Mensaje</label>
                             <textarea className="form-control" id="msj" cols="30" rows="10" required placeholder="Deja tu mensaje" onChange={(e) => handleChange(e)} value={inputs.msj}></textarea >
                         </div>
-                        <button className="buttons1 btn btn-default" onClick={(e) => handleClick(e)}>Enviar</button>
+                        <button className="buttons1 btn btn-default" onClick={(e) => handleClick(e)} >Enviar</button>
                     </form>
                 </div>
             </div>
