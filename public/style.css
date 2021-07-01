@@ -1,0 +1,151 @@
+body {
+  color: white !important;
+  font-family: inherit, Arial, Helvetica, sans-serif !important;
+  background-color: black !important;
+}
+.logo {
+  width: 200px;
+}
+.bg1 {
+  background-image: url(./img/img1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 40vh;
+}
+.bg2 {
+  background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 0.6) 0%,
+      rgba(160, 156, 156, 0.5) 0%
+    ),
+    url(./img/img5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 20%;
+}
+#title1 {
+  color: white;
+  text-align: center;
+  padding: 20%;
+  font-size: 2em;
+}
+#title2 {
+  padding: 5%;
+  font-size: 1.5em;
+}
+.navbar {
+  background-color: black !important;
+}
+.navbar li {
+  background-color: black;
+  opacity: 0.9;
+}
+footer {
+  background-color: black;
+  color: white;
+  font-size: 13px;
+}
+.fa-instagram,
+.fa-facebook-square {
+  color: white;
+  font-size: 30px;
+}
+.index {
+  background-color: black;
+}
+.buttons {
+  border: 2px solid white;
+
+  color: white;
+  padding: 10px 40px;
+  transition: background-color 0.1s ease-in;
+}
+.buttons:hover {
+  background-color: gray;
+  text-decoration: none;
+  color: black;
+}
+.img2 {
+  width: 100%;
+  min-height: 100%;
+}
+.navbar {
+  font-size: 17px;
+}
+.info {
+  font-size: 15px;
+}
+.map {
+  width: 100%;
+  margin: 0px;
+  height: 230px;
+}
+.buttons1 {
+  border: 2px solid white !important;
+  color: white !important;
+  padding: 10px 40px !important;
+  transition: background-color 0.1s ease-in;
+}
+.buttons1:hover {
+  background-color: dodgerblue;
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .logo {
+    width: 255px;
+  }
+  .navbar {
+    height: 100px;
+  }
+  .bg1 {
+    height: 680px;
+  }
+  #title1 {
+    color: white;
+    text-align: center;
+    padding: 140px;
+    font-size: 4em;
+  }
+  .bg2 {
+    height: 10%;
+  }
+  #title2 {
+    padding: 5%;
+    font-size: 3em;
+  }
+  #nuestro {
+    font-size: 50px;
+  }
+  .buttons2 {
+    box-shadow: 0px 0px 20px 1px silver;
+  }
+  form {
+    box-shadow: 0px 0px 20px 1px silver;
+  }
+  .map {
+    width: 100%;
+    margin: 0px;
+    height: 400px;
+  }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+}
+.success-send {
+  z-index: 12;
+  padding: 15px;
+  width: 30%;
+  height: 20%;
+  background-color: white;
+}
