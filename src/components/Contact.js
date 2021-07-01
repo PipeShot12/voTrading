@@ -69,10 +69,12 @@ export default function Contact() {
                     const message = await req.text();
                     setMsj({ msj: message, status: 200 });
                     setShowMsj(true)
+                    setInputs({ name: "", email: "", tel: "", msj: "" });
                 } else {
                     const message = await req.text();
                     setMsj({ msj: message, status: 503 })
                     setShowMsj(true)
+                    setInputs({ name: "", email: "", tel: "", msj: "" });
                 }
             } catch {
                 const message = "Hubo un Error"
