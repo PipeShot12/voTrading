@@ -90,7 +90,7 @@ export default function Contact() {
 
     }
 
-    console.log(msj)
+
     return (
         <main>
             {msj.status === 200 && showMsj ? <SuccessAndError msj={msj.msj} color={"text-success"} icon={"fas fa-check-circle"} /> :
