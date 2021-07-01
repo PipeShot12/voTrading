@@ -1,10 +1,10 @@
-import { HeaderWithRouter } from './components/navbar';
-import Footer from './components/footer';
-import Index from './components/index';
-import About from './components/about';
-import Services from './components/services';
-import VoiceBank from './components/voiceBank';
-import Contact from './components/contact';
+import { HeaderWithRouter } from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import About from './components/About';
+import Services from './components/Services';
+import VoiceBank from './components/VoiceBank';
+import Contact from './components/Contact';
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,19 +18,19 @@ function App() {
 
         <Switch>
 
-          <Route path="/" exact component={Index} />
+          <Route path="/" exact component={Home} />
 
           <Route path="/about" component={About} />
 
           <Route path="/services" component={Services} />
 
-          <Route path="/portfolio" component={Index} />
+          <Route path="/portfolio" component={Home} />
 
           <Route path="/voice-bank" component={VoiceBank} />
 
           <Route path="/contact" component={Contact} />
 
-          <Route component={Index} />
+          <Route component={Home} />
 
         </Switch>
 
