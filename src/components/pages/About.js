@@ -4,7 +4,7 @@ const folder = process.env.PUBLIC_URL;
 export default function About() {
     return (
         <main>
-            <SeoUse title="About" canonical="" content="About us" />
+            <SeoUse title="About" canonical="https://votrading.netlify.app/about" content="About us" />
             <div className="container-fluid bg-dark">
                 <h1 className="text-center py-5">Nosotros</h1>
             </div>

@@ -4,7 +4,7 @@ import SeoUse from "../SeoUse"
 export default function voiceBank() {
     return (
         <main >
-            <SeoUse title="Voice Bank" canonical="" content="our Voices" />
+            <SeoUse title="Voice Bank" canonical="https://votrading.netlify.app/voice-bank" content="our Voices" />
             <div className="d-flex col-12 col-md-6 mx-auto mt-5">
                 <div className="row">
                     <div className="col-md-5 col-12">

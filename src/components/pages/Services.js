@@ -5,7 +5,7 @@ const folder = process.env.PUBLIC_URL;
 export default function services() {
     return (
         <main>
-            <SeoUse title="Services" canonical="" content="Our Services" />
+            <SeoUse title="Services" canonical="https://votrading.netlify.app/services" content="Our Services" />
             <div className="container-fluid bg-dark">
                 <h1 className="text-center py-5">Servicios</h1>
             </div>

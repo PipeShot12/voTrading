@@ -57,7 +57,7 @@ export default function Contact() {
 
     return (
         <main>
-            <SeoUse title="Contact" canonical="" content="Contact Form" />
+            <SeoUse title="Contact" canonical="https://votrading.netlify.app/contact" content="Contact Form" />
             {loading ? <SuccessAndError msj={msj.msj} color={"text-primary"} icon={"fas fa-spinner fa-pulse"} /> :
                 msj.status === 200 && showMsj ? <SuccessAndError msj={msj.msj} color={"text-success"} icon={"fas fa-check-circle"} /> :
                     showMsj ? <SuccessAndError msj={msj.msj} color={"text-danger"} icon={"fas fa-exclamation-triangle"} /> :

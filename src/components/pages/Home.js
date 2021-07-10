@@ -6,7 +6,7 @@ export default function Index() {
     return (
 
         <main>
-            <SeoUse title="Home" canonical="" content="home page" />
+            <SeoUse title="Home" canonical="https://votrading.netlify.app/" content="home page" />
             <div className="bg1 d-flex align-items-center">
                 <h1 id="title1">Tú lo imaginas, nosotros lo hacemos sonar. </h1>
             </div>
