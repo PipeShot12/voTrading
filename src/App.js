@@ -1,45 +1,42 @@
-import { lazy, Suspense } from "react"
-
 import { HeaderWithRouter } from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Services from './components/pages/Services';
+import VoiceBank from './components/pages/VoiceBank';
+import Contact from './components/pages/Contact';
+import NotFound from './components/pages/NotFound';
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-const Home = lazy(() => import("./components/pages/Home"))
-const About = lazy(() => import("./components/pages/About"))
-const Services = lazy(() => import("./components/pages/Services"))
-const VoiceBank = lazy(() => import("./components/pages/VoiceBank"))
-const Contact = lazy(() => import("./components/pages/Contact"))
-const NotFound = lazy(() => import("./components/pages/NotFound"))
 
 function App() {
   return (
     <div className="index">
       <Router>
-        <Suspense fallback={null}>
-          <HeaderWithRouter />
 
-          <Switch>
+        <HeaderWithRouter />
 
-            <Route path="/" exact component={Home} />
+        <Switch>
 
-            <Route path="/about" component={About} />
+          <Route path="/" exact component={Home} />
 
-            <Route path="/services" component={Services} />
+          <Route path="/about" component={About} />
 
-            <Route path="/portfolio" component={Home} />
+          <Route path="/services" component={Services} />
 
-            <Route path="/voice-bank" component={VoiceBank} />
+          <Route path="/portfolio" component={Home} />
 
-            <Route path="/contact" component={Contact} />
+          <Route path="/voice-bank" component={VoiceBank} />
 
-            <Route component={NotFound} />
+          <Route path="/contact" component={Contact} />
 
-          </Switch>
+          <Route component={NotFound} />
 
-          <Footer />
-        </Suspense>
+        </Switch>
+
+        <Footer />
+
       </Router>
     </div>
   );
