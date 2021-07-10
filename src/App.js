@@ -2,12 +2,6 @@ import { lazy, Suspense } from "react"
 
 import { HeaderWithRouter } from './components/Navbar';
 import Footer from './components/Footer';
-// import Home from './components/pages/Home';
-// import About from './components/pages/About';
-// import Services from './components/pages/Services';
-// import VoiceBank from './components/pages/VoiceBank';
-// import Contact from './components/pages/Contact';
-// import NotFound from './components/pages/NotFound';
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
