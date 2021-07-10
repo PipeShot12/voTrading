@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SeoUse from "../SeoUse";
 
 export default function Index() {
     return (
 
         <main>
+            <SeoUse title="Home" canonical="" content="home page" />
             <div className="bg1 d-flex align-items-center">
                 <h1 id="title1">Tú lo imaginas, nosotros lo hacemos sonar. </h1>
             </div>
@@ -51,7 +53,7 @@ export default function Index() {
                 <h2 id="title2" className="text-center">Disfruta del Sonido en todas sus formas</h2>
             </div>
 
-        </main>
+        </main >
 
     )
 }
